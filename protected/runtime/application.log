@@ -20,3 +20,44 @@ Stack trace:
 REQUEST_URI=/trackstar/index.php?r=gii/model
 HTTP_REFERER=http://localhost/trackstar/index.php?r=gii/default/index
 ---
+2012/07/14 08:31:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "project".' in D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(135): CWebApplication->runController('project')
+#1 D:\root\My Work\webapps\trackstar\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\root\My Work\webapps\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=project
+---
+2012/07/14 08:31:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Project".' in D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(135): CWebApplication->runController('Project')
+#1 D:\root\My Work\webapps\trackstar\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\root\My Work\webapps\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=Project
+---
+2012/07/14 08:32:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'create_time' at row 1. The SQL statement executed was: INSERT INTO `projects` (`name`, `description`, `create_time`, `create_userid`, `update_time`, `update_userid`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in D:\root\My Work\webapps\trackstar\protected\controllers\ProjectsController.php (72)
+in D:\root\My Work\webapps\trackstar\index.php (13)
+2012/07/14 08:32:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'create_time' at row 1. The SQL statement executed was: INSERT INTO `projects` (`name`, `description`, `create_time`, `create_userid`, `update_time`, `update_userid`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in D:\root\My Work\webapps\trackstar\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\root\My Work\webapps\trackstar\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 D:\root\My Work\webapps\trackstar\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 D:\root\My Work\webapps\trackstar\protected\controllers\ProjectsController.php(72): CActiveRecord->save()
+#3 D:\root\My Work\webapps\trackstar\framework\web\actions\CInlineAction.php(50): ProjectsController->actionCreate()
+#4 D:\root\My Work\webapps\trackstar\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\root\My Work\webapps\trackstar\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\root\My Work\webapps\trackstar\framework\web\CController.php(292): CFilterChain->run()
+#11 D:\root\My Work\webapps\trackstar\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(276): CController->run('create')
+#13 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(135): CWebApplication->runController('projects/create')
+#14 D:\root\My Work\webapps\trackstar\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\root\My Work\webapps\trackstar\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/trackstar/index.php?r=projects/create
+HTTP_REFERER=http://localhost/trackstar/index.php?r=projects/create
+---
