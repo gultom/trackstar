@@ -147,4 +147,6 @@ class Issues extends CActiveRecord
                 self::STATUS_CLOSED => 'CLOSED',
             );
     }
+    
+    
 }
