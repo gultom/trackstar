@@ -15,6 +15,7 @@ class IssuesController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
+            'projectContext + create', // check to ensure valid project context
 		);
 	}
 
@@ -173,4 +174,11 @@ class IssuesController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+    /**
+     * Perform filter Context before add new Issues 
+     */
+    public function filterProjectContext() {
+        $filterChain->run();
+    }
 }

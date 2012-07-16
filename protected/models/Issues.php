@@ -124,15 +124,27 @@ class Issues extends CActiveRecord
 		));
 	}
         
-        const TYPE_BUG = 0;
-        const TYPE_FEATURE = 1;
-        const TYPE_TASK = 2;
+    const TYPE_BUG = 0;
+    const TYPE_FEATURE = 1;
+    const TYPE_TASK = 2;
 
-        public function getTypeOptions() {
-            return array(
+    public function getTypeOptions() {
+        return array(
                 self::TYPE_BUG => 'Bug',
                 self::TYPE_FEATURE => 'Feature',
                 self::TYPE_TASK => 'Task'
             );
-        }
+    }
+        
+    const STATUS_OPEN = 0;
+    const STATUS_PROCEED = 1;
+    const STATUS_CLOSED = 2;
+    
+    public function getStatusOptions() {
+        return array (
+                self::STATUS_OPEN => 'OPEN',
+                self::STATUS_PROCEED => 'PROCEED',
+                self::STATUS_CLOSED => 'CLOSED',
+            );
+    }
 }
