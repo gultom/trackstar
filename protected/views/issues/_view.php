@@ -12,20 +12,12 @@
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('project_id')); ?>:</b>
-	<?php echo CHtml::encode($data->project_id); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('type_id')); ?>:</b>
 	<?php echo CHtml::encode($data->type_id); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status_id')); ?>:</b>
 	<?php echo CHtml::encode($data->status_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('owner_id')); ?>:</b>
-	<?php echo CHtml::encode($data->owner_id); ?>
 	<br />
 
 	<?php /*
