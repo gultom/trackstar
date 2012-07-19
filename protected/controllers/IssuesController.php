@@ -63,7 +63,7 @@ class IssuesController extends Controller
 	public function actionCreate()
 	{
 		$model=new Issues;
-                $model->project_id = $this->_project->id;
+        $model->project_id = $this->_project->id;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
