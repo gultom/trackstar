@@ -51,5 +51,12 @@ class ProjectTest extends CDbTestCase {
         $deletedProject = Projects::model()->findByPk($savedProjectId);
         $this->assertEquals(NULL, $deletedProject);
     }
+    
+    public function testGetUserOptions() {
+        $project = $this->projects('project1');
+        $options = $project->userOptions;
+        $this->assertTrue(is_array($options));
+        $this->assertTrue(count($options) > 0);
+    }
 }
 ?>
