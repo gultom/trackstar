@@ -27,4 +27,10 @@ $this->menu=array(
 		'update_time',
 		'update_userid',
 	),
-)); ?>
+));
+
+$this->widget('zii.widgets.CListView', array(
+    'dataProvider' => $issueDataProvider,
+    'itemView' => '/issues/_view',
+));
+?>
