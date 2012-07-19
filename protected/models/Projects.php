@@ -58,6 +58,8 @@ class Projects extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'issues' => array(self::HAS_MANY, 'Issue', 'project_id'),
+            'users' => array(self::MANY_MANY, 'Users', 'project_user_assignment(project_id, user_id)')
 		);
 	}
 
@@ -100,4 +102,9 @@ class Projects extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+    
+    public function getUserOptions() {
+        $userArray = CHtml::listData($this->users, 'id', 'username');
+        return $userArray;
+    }
 }
