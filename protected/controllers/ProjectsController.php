@@ -50,8 +50,18 @@ class ProjectsController extends Controller
 	 */
 	public function actionView($id)
 	{
+        $issueDataProvider = new CActiveDataProvider('Issues', array(
+            'criteria' => array(
+                'condition' => 'project_id=:projectId',
+                'params' => array (':projectId' => $this->loadModel($id)->id),
+            ),
+            'pagination' => array(
+                'pageSize' => 1
+            )
+        ));
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+            'issueDataProvider' => $issueDataProvider,
 		));
 	}
 
