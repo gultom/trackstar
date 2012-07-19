@@ -221,3 +221,80 @@ REQUEST_URI=/trackstar/index.php?r=issues/create&pid=1
 HTTP_REFERER=http://localhost/trackstar/index.php?r=issues
 >>>>>>> origin/master
 ---
+2012/07/19 21:51:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(135): CWebApplication->runController('login')
+#1 D:\root\My Work\webapps\trackstar\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\root\My Work\webapps\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=login
+---
+2012/07/19 22:49:37 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "dromDownList".' in D:\root\My Work\webapps\trackstar\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\root\My Work\webapps\trackstar\protected\views\issues\_form.php(41): CComponent->__call('dromDownList', Array)
+#1 D:\root\My Work\webapps\trackstar\protected\views\issues\_form.php(41): CActiveForm->dromDownList(Object(Issues), 'owner_id', Array)
+#2 D:\root\My Work\webapps\trackstar\framework\web\CBaseController.php(127): require('D:\root\My Work...')
+#3 D:\root\My Work\webapps\trackstar\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\root\My Work...', Array, true)
+#4 D:\root\My Work\webapps\trackstar\framework\web\CController.php(870): CBaseController->renderFile('D:\root\My Work...', Array, true)
+#5 D:\root\My Work\webapps\trackstar\protected\views\issues\create.php(15): CController->renderPartial('_form', Array)
+#6 D:\root\My Work\webapps\trackstar\framework\web\CBaseController.php(127): require('D:\root\My Work...')
+#7 D:\root\My Work\webapps\trackstar\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\root\My Work...', Array, true)
+#8 D:\root\My Work\webapps\trackstar\framework\web\CController.php(870): CBaseController->renderFile('D:\root\My Work...', Array, true)
+#9 D:\root\My Work\webapps\trackstar\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#10 D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php(80): CController->render('create', Array)
+#11 D:\root\My Work\webapps\trackstar\framework\web\actions\CInlineAction.php(50): IssuesController->actionCreate()
+#12 D:\root\My Work\webapps\trackstar\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php(220): CFilterChain->run()
+#15 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): IssuesController->filterProjectContext(Object(CFilterChain))
+#16 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 D:\root\My Work\webapps\trackstar\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 D:\root\My Work\webapps\trackstar\framework\web\CController.php(292): CFilterChain->run()
+#22 D:\root\My Work\webapps\trackstar\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(276): CController->run('create')
+#24 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(135): CWebApplication->runController('issues/create')
+#25 D:\root\My Work\webapps\trackstar\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 D:\root\My Work\webapps\trackstar\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/trackstar/index.php?r=issues/create&pid=1
+HTTP_REFERER=http://localhost/trackstar/index.php?r=projects/view&id=1
+---
+2012/07/19 22:52:16 [error] [exception.CException] exception 'CException' with message 'Property "Issues.request_id" is not defined.' in D:\root\My Work\webapps\trackstar\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\root\My Work\webapps\trackstar\framework\db\ar\CActiveRecord.php(144): CComponent->__get('request_id')
+#1 D:\root\My Work\webapps\trackstar\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('request_id')
+#2 D:\root\My Work\webapps\trackstar\framework\web\helpers\CHtml.php(1402): CHtml::resolveValue(Object(Issues), 'request_id')
+#3 D:\root\My Work\webapps\trackstar\framework\web\widgets\CActiveForm.php(681): CHtml::activeDropDownList(Object(Issues), 'request_id', Array, Array)
+#4 D:\root\My Work\webapps\trackstar\protected\views\issues\_form.php(45): CActiveForm->dropDownList(Object(Issues), 'request_id', Array)
+#5 D:\root\My Work\webapps\trackstar\framework\web\CBaseController.php(127): require('D:\root\My Work...')
+#6 D:\root\My Work\webapps\trackstar\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\root\My Work...', Array, true)
+#7 D:\root\My Work\webapps\trackstar\framework\web\CController.php(870): CBaseController->renderFile('D:\root\My Work...', Array, true)
+#8 D:\root\My Work\webapps\trackstar\protected\views\issues\create.php(15): CController->renderPartial('_form', Array)
+#9 D:\root\My Work\webapps\trackstar\framework\web\CBaseController.php(127): require('D:\root\My Work...')
+#10 D:\root\My Work\webapps\trackstar\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\root\My Work...', Array, true)
+#11 D:\root\My Work\webapps\trackstar\framework\web\CController.php(870): CBaseController->renderFile('D:\root\My Work...', Array, true)
+#12 D:\root\My Work\webapps\trackstar\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php(80): CController->render('create', Array)
+#14 D:\root\My Work\webapps\trackstar\framework\web\actions\CInlineAction.php(50): IssuesController->actionCreate()
+#15 D:\root\My Work\webapps\trackstar\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php(220): CFilterChain->run()
+#18 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): IssuesController->filterProjectContext(Object(CFilterChain))
+#19 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 D:\root\My Work\webapps\trackstar\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 D:\root\My Work\webapps\trackstar\framework\web\CController.php(292): CFilterChain->run()
+#25 D:\root\My Work\webapps\trackstar\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(276): CController->run('create')
+#27 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(135): CWebApplication->runController('issues/create')
+#28 D:\root\My Work\webapps\trackstar\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 D:\root\My Work\webapps\trackstar\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/trackstar/index.php?r=issues/create&pid=1
+HTTP_REFERER=http://localhost/trackstar/index.php?r=projects/view&id=1
+---
