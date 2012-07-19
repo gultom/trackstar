@@ -10,7 +10,7 @@ $this->menu=array(
 	array('label'=>'Update Projects', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete Projects', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Projects', 'url'=>array('admin')),
-        array('label'=>'Create Issue', 'url'=>array('issue/create', 'pid' => $model->id)),
+        array('label'=>'Create Issue', 'url'=>array('issues/create', 'pid' => $model->id)),
 );
 ?>
 
