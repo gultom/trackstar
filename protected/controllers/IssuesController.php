@@ -220,4 +220,7 @@ class IssuesController extends Controller
         $filterChain->run();
     }
     
+    public function getProject() {
+        return $this->_project;
+    }
 }

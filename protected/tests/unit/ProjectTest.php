@@ -4,6 +4,8 @@
 class ProjectTest extends CDbTestCase {
     public $fixtures = array (
         'projects' => 'Projects',
+        'users' => 'Users',
+        'projUserAssign' => ':project_user_assignment'
     );
     
     public function testCreate() {
