@@ -118,6 +118,8 @@ class Issues extends CActiveRecord
 		$criteria->compare('create_userid',$this->create_userid);
 		$criteria->compare('update_time',$this->update_time,true);
 		$criteria->compare('update_userid',$this->update_userid);
+        $criteria->condition = 'project_id=:projectId';
+        $criteria->params=array(':projectId' => $this->project_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
