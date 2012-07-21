@@ -17,7 +17,7 @@ class IssuesTest extends CDbTestCase {
     }
     
     public function testGetStatusText() {
-        $this->assertTrue('OPEN' == $this->issues('issueBug')->getStatusText());
+        $this->assertTrue('PROCEED' == $this->issues('issueBug')->getStatusText());
     }
     
     public function testGetTypeText() {
