@@ -267,3 +267,119 @@ Stack trace:
 REQUEST_URI=/trackstar/index.php?r=issues/update&id=1
 HTTP_REFERER=http://localhost/trackstar/index.php?r=issues/view&id=1
 ---
+2012/07/22 04:08:58 [error] [exception.CException] exception 'CException' with message 'Property "IssuesController._model" is not defined.' in D:\root\My Work\webapps\trackstar\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php(153): CComponent->__get('_model')
+#1 D:\root\My Work\webapps\trackstar\framework\web\actions\CInlineAction.php(50): IssuesController->actionAdmin()
+#2 D:\root\My Work\webapps\trackstar\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php(227): CFilterChain->run()
+#5 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): IssuesController->filterProjectContext(Object(CFilterChain))
+#6 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 D:\root\My Work\webapps\trackstar\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 D:\root\My Work\webapps\trackstar\framework\web\CController.php(292): CFilterChain->run()
+#12 D:\root\My Work\webapps\trackstar\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(276): CController->run('admin')
+#14 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(135): CWebApplication->runController('issues/admin')
+#15 D:\root\My Work\webapps\trackstar\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\root\My Work\webapps\trackstar\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/trackstar/index.php?r=issues/admin&pid=1
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issues/view&id=1
+---
+2012/07/22 04:10:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist' in D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php:201
+Stack trace:
+#0 D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php(224): IssuesController->loadProject(NULL)
+#1 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): IssuesController->filterProjectContext(Object(CFilterChain))
+#2 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\root\My Work\webapps\trackstar\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\root\My Work\webapps\trackstar\framework\web\CController.php(292): CFilterChain->run()
+#8 D:\root\My Work\webapps\trackstar\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(276): CController->run('')
+#10 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(135): CWebApplication->runController('issues')
+#11 D:\root\My Work\webapps\trackstar\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\root\My Work\webapps\trackstar\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/trackstar/index.php?r=issues
+---
+2012/07/22 04:12:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist' in D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php:201
+Stack trace:
+#0 D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php(224): IssuesController->loadProject(NULL)
+#1 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): IssuesController->filterProjectContext(Object(CFilterChain))
+#2 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\root\My Work\webapps\trackstar\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\root\My Work\webapps\trackstar\framework\web\CController.php(292): CFilterChain->run()
+#8 D:\root\My Work\webapps\trackstar\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(276): CController->run('create')
+#10 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(135): CWebApplication->runController('issues/create')
+#11 D:\root\My Work\webapps\trackstar\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\root\My Work\webapps\trackstar\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/trackstar/index.php?r=issues/create
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issues/admin&pid=2
+---
+2012/07/22 04:21:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist' in D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php:201
+Stack trace:
+#0 D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php(224): IssuesController->loadProject(NULL)
+#1 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): IssuesController->filterProjectContext(Object(CFilterChain))
+#2 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\root\My Work\webapps\trackstar\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\root\My Work\webapps\trackstar\framework\web\CController.php(292): CFilterChain->run()
+#8 D:\root\My Work\webapps\trackstar\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(276): CController->run('create')
+#10 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(135): CWebApplication->runController('issues/create')
+#11 D:\root\My Work\webapps\trackstar\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\root\My Work\webapps\trackstar\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/trackstar/index.php?r=issues/create
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issues/update&id=2
+---
+2012/07/22 04:22:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist' in D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php:201
+Stack trace:
+#0 D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php(224): IssuesController->loadProject(NULL)
+#1 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): IssuesController->filterProjectContext(Object(CFilterChain))
+#2 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\root\My Work\webapps\trackstar\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\root\My Work\webapps\trackstar\framework\web\CController.php(292): CFilterChain->run()
+#8 D:\root\My Work\webapps\trackstar\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(276): CController->run('create')
+#10 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(135): CWebApplication->runController('issues/create')
+#11 D:\root\My Work\webapps\trackstar\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\root\My Work\webapps\trackstar\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/trackstar/index.php?r=issues/create
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issues/update&id=2
+---
+2012/07/22 04:22:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist' in D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php:201
+Stack trace:
+#0 D:\root\My Work\webapps\trackstar\protected\controllers\IssuesController.php(224): IssuesController->loadProject(NULL)
+#1 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): IssuesController->filterProjectContext(Object(CFilterChain))
+#2 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\root\My Work\webapps\trackstar\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 D:\root\My Work\webapps\trackstar\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\root\My Work\webapps\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\root\My Work\webapps\trackstar\framework\web\CController.php(292): CFilterChain->run()
+#8 D:\root\My Work\webapps\trackstar\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(276): CController->run('create')
+#10 D:\root\My Work\webapps\trackstar\framework\web\CWebApplication.php(135): CWebApplication->runController('issues/create')
+#11 D:\root\My Work\webapps\trackstar\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\root\My Work\webapps\trackstar\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/trackstar/index.php?r=issues/create&id=1
+---
