@@ -135,6 +135,14 @@ class Issues extends CActiveRecord
                 self::TYPE_TASK => 'Task'
             );
     }
+    
+    /**
+     * @return string the type text display for the current issue 
+     */
+    public function getTypeText() {
+        $typeOptions = $this->typeOptions;
+        return isset($typeOptions[$this->type_id]) ? $typeOptions[$this->type_id] : "unknown type ({$this->type_id})";
+    }
         
     const STATUS_OPEN = 0;
     const STATUS_PROCEED = 1;
@@ -154,13 +162,5 @@ class Issues extends CActiveRecord
     public function getStatusText() {
         $statusOptions = $this->statusOptions;
         return isset($statusOptions[$this->status_id]) ? $statusOptions[$this->status_id] : "unknown status ({$this->status_id})";
-    }
-    
-    /**
-     * @return string the type text display for the current issue 
-     */
-    public function getTypeText() {
-        $typeOptions = $this->typeOptions;
-        return isset($typeOptions[$this->type_id]) ? $typeOptions[$this->type_id] : "unknown type ({$this->type_id})";
     }
 }
