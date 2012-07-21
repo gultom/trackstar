@@ -5,11 +5,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Issues', 'url'=>array('index')),
-	array('label'=>'Create Issues', 'url'=>array('create')),
+	array('label'=>'List Issues', 'url'=>array('index', 'pid' => $model->project->id)),
+	array('label'=>'Create Issues', 'url'=>array('create', 'pid' => $model->project->id)),
 	array('label'=>'Update Issues', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete Issues', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Issues', 'url'=>array('admin')),
+	array('label'=>'Manage Issues', 'url'=>array('admin', 'pid' => $model->project_id)),
 );
 ?>
 
@@ -21,7 +21,10 @@ $this->menu=array(
 		'id',
 		'name',
 		'description',
-		'project_id',
+        array (
+            'name' => 'project_id',
+            'value' => $model->project->name,
+        ),
 		array(
             'name' => 'type_id',
             'value' => $model->getTypeText()
@@ -30,8 +33,14 @@ $this->menu=array(
             'name' => 'status_id',
             'value' => $model->getStatusText()
         ),
-		'owner_id',
-		'requester_id',
+        array (
+            'name' => 'owner_id',
+            'value' => $model->owner->username,
+        ),
+        array (
+            'name' => 'requester_id',
+            'value' => $model->requester->username,
+        ),
 		'create_time',
 		'create_userid',
 		'update_time',
