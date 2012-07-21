@@ -22,8 +22,14 @@ $this->menu=array(
 		'name',
 		'description',
 		'project_id',
-		'type_id',
-		'status_id',
+		array(
+            'name' => 'type_id',
+            'value' => $model->getTypeText()
+        ),
+        array(
+            'name' => 'status_id',
+            'value' => $model->getStatusText()
+        ),
 		'owner_id',
 		'requester_id',
 		'create_time',
