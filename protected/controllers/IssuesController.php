@@ -148,9 +148,10 @@ class IssuesController extends Controller
 	{
 		$model=new Issues('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Issues']))
+		if(isset($_GET['Issues'])) {
 			$model->attributes=$_GET['Issues'];
             $model->project_id = $this->_model->id;
+        }
 
 		$this->render('admin',array(
 			'model'=>$model,
