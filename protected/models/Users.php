@@ -66,11 +66,11 @@ class Users extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'issues' => array(self::HAS_MANY, 'Issues', 'requester_id'),
-			'issues1' => array(self::HAS_MANY, 'Issues', 'owner_id'),
+			'issues' => array(self::HAS_MANY, 'Issues', 'owner_id'),
+			'issues1' => array(self::HAS_MANY, 'Issues', 'requester_id'),
 			'projects' => array(self::MANY_MANY, 'Projects', 'project_user_assignment(user_id, project_id)'),
-			'projects1' => array(self::HAS_MANY, 'Projects', 'update_userid'),
-			'projects2' => array(self::HAS_MANY, 'Projects', 'create_userid'),
+			'projects1' => array(self::HAS_MANY, 'Projects', 'create_userid'),
+			'projects2' => array(self::HAS_MANY, 'Projects', 'update_userid'),
 		);
 	}
 
