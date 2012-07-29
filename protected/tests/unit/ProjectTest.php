@@ -15,17 +15,21 @@ class ProjectTest extends CDbTestCase {
         $newProject->setAttributes(array(
             'name' => $newProjectName,
             'description' => 'This is test of new project creation',
-            'createTime' => '2012-07-18 00:00:00',
-            'createUser' => '1',
-            'updateTime' => '2012-07-18 00:00:00',
-            'updateUser' => '1'
         ));
-        $this->assertTrue($newProject->save(false));
+        // set the application user id to the first user in our users fixture data
+        Yii::app()->user->setId($this->users('user1')->id);
+        // save the new project, trigerring attribute validation
+        $this->assertTrue($newProject->save());
+        //$this->assertTrue($newProject->save(false));
         
         // Read back the newly created project to ensure the creation worked
         $retrievedProject = Projects::model()->findByPk($newProject->id);
         $this->assertTrue($retrievedProject instanceof Projects);
         $this->assertEquals($newProjectName, $retrievedProject->name);
+        
+        // ensure the user associated with creating the new project is the same as the application user we set
+        // when saving project
+        $this->assertEquals(Yii::app()->user->id, $retrievedProject->create_userid);
     }
     
     public function testRead() {
