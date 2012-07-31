@@ -22,7 +22,7 @@
  * @property Users $owner
  * @property Projects $project
  */
-class Issues extends CActiveRecord
+class Issues extends TrackStarActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
