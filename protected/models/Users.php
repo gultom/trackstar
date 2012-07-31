@@ -21,7 +21,7 @@
  * @property Projects[] $projects1
  * @property Projects[] $projects2
  */
-class Users extends CActiveRecord
+class Users extends TrackStarActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
