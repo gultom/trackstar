@@ -121,4 +121,16 @@ class Users extends TrackStarActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+    
+    /**
+     * perform one-way encryption on the password before we store it in the database 
+     */
+    public function afterValidate() {
+        parent::afterValidate();
+        $this->password = self::encryptPassword($this->password);
+    }
+    
+    public function encryptPassword($password) {
+        return md5($password);
+    }
 }
